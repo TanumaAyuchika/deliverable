@@ -17,7 +17,13 @@ class CreateReviewsTable extends Migration
             $table->increments('id');
             $table->string('title',50);
             $table->string('body',250);
-            $table->float('amount',8,2);
+            $table->float('review',2,1);
+            $table->float('chest',2,1);
+            $table->float('arm',2,1);
+            $table->float('shoulder',2,1);
+            $table->float('belly',2,1);
+            $table->float('back',2,1);
+            $table->float('leg',2,1);
             $table->timestamps();
             $table->softDeletes();
         });

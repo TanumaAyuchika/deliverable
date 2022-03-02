@@ -17,15 +17,18 @@ class CreateReviewsTable extends Migration
             $table->increments('id');
             $table->string('title',50);
             $table->string('body',250);
-            $table->float('review',2,1);
-            $table->float('chest',2,1);
-            $table->float('arm',2,1);
-            $table->float('shoulder',2,1);
-            $table->float('belly',2,1);
-            $table->float('back',2,1);
-            $table->float('leg',2,1);
+            $table->integer('review');
+            $table->integer('chest');
+            $table->integer('arm');
+            $table->integer('shoulder');
+            $table->integer('belly');
+            $table->integer('back');
+            $table->integer('leg');
             $table->timestamps();
             $table->softDeletes();
+            $table->integer('user_id');
+            $table->integer('store_id');
+            
         });
     }
 

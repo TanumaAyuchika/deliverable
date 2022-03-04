@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/reviews','ReviewController@index');
+Route::get('/','ReviewController@index');

@@ -18,6 +18,6 @@ $factory->define(Review::class, function (Faker $faker) {
         'leg' => $faker->numberBetween(0.0,5.0),
         'user_id' => $faker->numberBetween(1,1),
         'store_id' => $faker->numberBetween(1,1),
-        
+        'comment' => $faker->realtext(300),
     ];
 });

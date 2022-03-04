@@ -28,6 +28,7 @@ class CreateReviewsTable extends Migration
             $table->softDeletes();
             $table->integer('user_id');
             $table->integer('store_id');
+            $table->string('comment',300);
             
         });
     }

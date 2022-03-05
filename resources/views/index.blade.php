@@ -11,7 +11,7 @@
         <div class='reviews'>
             @foreach ($reviews as $review)
                <div class='review'>
-                   <h2 class='title'>{{ $review->title }}</h2>
+                   <h2 class='title'> <a href="/reviews/{{ $review->id }}">{{ $review->title }}</a></h2>
                    <p class='review'>総合評価：{{ $review->review }}</p>
                    <p class='chest'>胸：{{ $review->chest }}</p>
                    <p class='arm'>腕：{{ $review->arm }}</p>

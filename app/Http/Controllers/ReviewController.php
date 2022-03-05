@@ -11,4 +11,9 @@ class ReviewController extends Controller
     {
         return view('index')->with(['reviews' => $review->getPaginateByLimit()]);
     }
+    
+    public function show(Review $review)
+    {
+        return view('show')->with(['review' => $review]);
+    }
 }

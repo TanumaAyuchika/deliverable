@@ -12,4 +12,5 @@
 */
 
 Route::get('/','ReviewController@index');
+Route::get('/stores/create','StoreController@create');
 Route::get('/reviews/{review}','ReviewController@show');

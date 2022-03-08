@@ -9,11 +9,13 @@ class ReviewController extends Controller
 {
     public function index(Review $review)
     {
-        return view('index')->with(['reviews' => $review->getPaginateByLimit()]);
+        return view('reviews/index')->with(['reviews' => $review->getPaginateByLimit()]);
     }
     
     public function show(Review $review)
     {
         return view('show')->with(['review' => $review]);
     }
+    
+    
 }

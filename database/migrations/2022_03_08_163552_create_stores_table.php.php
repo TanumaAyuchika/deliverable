@@ -17,6 +17,7 @@ class CreateStoresTable extends Migration
             $table->increments('id');
             $table->string('name',50);//店舗名
             $table->string('address');//住所
+            $table->timestamps();
         });
     }
 

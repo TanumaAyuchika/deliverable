@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>エニタイム各店舗情報</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<title>エニタイム各店舗情報</title>
+@extends('layouts.app')　　　　　　　　　　　　　　　　　
+
+@section('content')
         <h1>エニタイム店舗情報</h1>
         <p class='create'>[<a href='/stores/create'>create</a>]</p>
         <div class='reviews'>
@@ -27,5 +22,5 @@
         <div class='paginate'>
             {{ $reviews->links() }}
         </div>
-    </body>
-</html>
+@endsection
+

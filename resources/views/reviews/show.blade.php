@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<h1>エニタイム各店舗詳細</h1>
+@extends('layouts.app')　　　　　　　　　　　　　　　　　
+
+@section('content')
+<!DOCTYPE HTML>
+<html lang="{{ str_replace("_", "-", app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>エニタイム各店舗情報</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Posts</title>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>エニタイム店舗情報</h1>
         <div class='review'>
             <h2 class='title'>{{ $review->title }}</h2>
             <p class='review'>総合評価：{{ $review->review }}</p>
@@ -21,5 +26,6 @@
             <p class='updated_at'>{{ $review->updated_at }}</p>
         </div>
         <div class='back'>[<a href='/'>戻る</a>]</div>
-    </body>
-</html>
+        </body>
+    </html>
+@endsection

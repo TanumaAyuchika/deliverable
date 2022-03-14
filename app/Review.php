@@ -10,4 +10,9 @@ class Review extends Model
     {
         return $this->orderBy('updated_at','DESC')->paginate($limit_count);
     }
+    
+    public function stores()
+    {
+        return $this->hasMany('App\Store');
+    }
 }

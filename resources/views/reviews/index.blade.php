@@ -3,7 +3,7 @@
 
 @section('content')
         <h1>エニタイム店舗情報</h1>
-        <p class='create'>[<a href='/stores/create'>create</a>]</p>
+        <p class='create'>[<a href='/stores/create'>店舗登録</a>]</p>
         <div class='reviews'>
             @foreach ($reviews as $review)
                <div class='review'>

@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/','ReviewController@index');
+Route::get('/','StoreController@index');
 Route::get('/stores/create','StoreController@create');
-Route::get('/reviews/{review}','ReviewController@show');
-Route::post('/stores/','StoreController@store');
+Route::get('/stores/{store}/reviews','StoreController@show');
+Route::get('/reviews/create','StoreController@create');
+Route::post('/stores','StoreController@store');
 
 Auth::routes();

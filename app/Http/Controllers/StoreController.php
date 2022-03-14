@@ -8,7 +8,17 @@ use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
-    public function create()
+    public function index(Store $store)
+    {
+        return view('stores/index')->with(['stores' => $store->getPaginateByLimit()]);
+    }
+    
+    public function show(Review $review)
+    {
+        return view('reviews/show')->with(['review' => $review]);
+    }
+    
+    public function create()//店舗登録ボタン
     {
         return view('stores/create');
     }
@@ -17,6 +27,6 @@ class StoreController extends Controller
     {
         $input = $request['store'];
         $store->fill($input)->save();
-        return redirect('/stores/' .$store->id);
+        return redirect('/reviews/create' .$store->id);
     }
 }

@@ -7,13 +7,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>エニタイム各店舗詳細</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <div class='review'>
+        <div class='reviews'>
             <h2 class='title'>{{ $review->title }}</h2>
             <p class='review'>総合評価：{{ $review->review }}</p>
             <p class='chest'>胸：{{ $review->chest }}</p>

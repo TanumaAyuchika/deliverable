@@ -17,5 +17,9 @@ class ReviewController extends Controller
         return view('reviews/show')->with(['review' => $review]);
     }
     
+    public function create()
+    {
+        dd('あああああ');
+    }
     
 }

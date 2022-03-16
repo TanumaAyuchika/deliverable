@@ -5,7 +5,7 @@
         <h1>エニタイム店舗情報</h1>
         <form action="/reviews" method="POST">
             {{ csrf_field() }}  
-        　　<div class='review'>
+        　　<div class='store'>
             　　<h2>総合評価</h2>
             　　<input type="range" min="1" max="5">
             </div>
@@ -38,5 +38,5 @@
                 <textarea name="review[comment]" placeholder="コメント"></textarea>
             </div>
         </form>
-        <div class='back'>[<a href='/'>戻る</a>]</div>
+        <div class='back'>[<a href='/stores/create'>戻る</a>]</div>
 @endsection

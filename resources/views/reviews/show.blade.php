@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <div class='reviews'>
+        <div class='stores'>
             <h2 class='title'>{{ $review->title }}</h2>
             <p class='review'>総合評価：{{ $review->review }}</p>
             <p class='chest'>胸：{{ $review->chest }}</p>

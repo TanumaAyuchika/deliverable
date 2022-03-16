@@ -13,9 +13,9 @@ class StoreController extends Controller
         return view('stores/index')->with(['stores' => $store->getPaginateByLimit()]);
     }
     
-    public function show(Review $review)
+    public function show(Store $store)
     {
-        return view('reviews/show')->with(['review' => $review]);
+        return view('stores/reviews')->with(['store' => $store]);
     }
     
     public function create()//店舗登録ボタン

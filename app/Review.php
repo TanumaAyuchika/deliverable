@@ -15,4 +15,28 @@ class Review extends Model
     {
         return $this->hasMany('App\Store');
     }
+    
+    protected $fillable = [
+           'title',
+           'review',
+           'chest',
+           'arm',
+           'shoulder',
+           'belly',
+           'back',
+           'leg',
+           'comment',          
+           'updated_at',
+        ];
+        
+        protected $attributes = [
+           'title' => 'あああ',
+           'body' => 'ああああ',
+           'review' => 5,
+        ];
+        
+        
+
+
+
 }

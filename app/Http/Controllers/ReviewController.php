@@ -17,4 +17,10 @@ class ReviewController extends Controller
         return view('reviews/create')->with(['review' => $review]);
     }
     
+    public function store(Request $request, Review $review)
+    {
+         $input = $request['review'];
+         $review->fill($input)->save();
+         return redirect('/reviews/' . $review->id);
+}
 }

@@ -13,7 +13,7 @@
                 <h2>住所</h2>
                 <input type="text" name="review[address]" placeholder="神奈川県横浜市西区みなとみらい4-4-5 横浜アイマークプレイス 1F"/>
             </div>
-            <input type="submit" value="保存"/>
+            <input type="submit" value="次へ"/>
         </form>   
         <div class='back'>[<a href='/'>戻る</a>]</div>
 @endsection        

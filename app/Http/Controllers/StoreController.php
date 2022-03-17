@@ -15,7 +15,7 @@ class StoreController extends Controller
     
     public function show(Store $store)
     {
-        return view('stores/reviews')->with(['store' => $store]);
+        return view('stores/show')->with(['store' => $store]);
     }
     
     public function create()//店舗登録ボタン

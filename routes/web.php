@@ -16,5 +16,6 @@ Route::get('/stores/create','StoreController@create');
 Route::get('/stores/{store}/reviews','StoreController@show');
 Route::get('/reviews/create','ReviewController@create');
 Route::post('/stores','StoreController@store');
+Route::post('/reviews', 'ReviewController@store');
 
 Auth::routes();

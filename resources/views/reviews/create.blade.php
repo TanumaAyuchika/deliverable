@@ -37,6 +37,7 @@
                 <h2>コメント</h2>
                 <textarea name="review[comment]" placeholder="コメント"></textarea>
             </div>
+            <input type="submit" value="投稿"/>
         </form>
         <div class='back'>[<a href='/stores/create'>戻る</a>]</div>
 @endsection

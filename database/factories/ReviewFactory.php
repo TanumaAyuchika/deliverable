@@ -7,8 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Review::class, function (Faker $faker) {
     return [
-        'title' => $faker->word(),
-        'body' => $faker->realText(200),//512文字の文章
         'review' => $faker->numberBetween(0.0,5.0),
         'chest' => $faker->numberBetween(0.0,5.0),
         'arm' => $faker->numberBetween(0.0,5.0),

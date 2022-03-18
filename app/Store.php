@@ -16,8 +16,8 @@ class Store extends Model
        'address',
     ];
     
-    public function review()
+    public function reviews()
     {
-        return $this->belongsTo('App\Review');
+        return $this->hasMany('App\Review');
     }
 }

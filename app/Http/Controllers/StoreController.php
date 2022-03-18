@@ -27,6 +27,6 @@ class StoreController extends Controller
     {
         $input = $request['review'];
         $store->fill($input)->save();
-        return redirect('/reviews/create');
+        return redirect('/stores/' . $store->id . '/reviews/create');
     }
 }

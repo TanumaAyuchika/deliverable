@@ -11,13 +11,12 @@ class Review extends Model
         return $this->orderBy('updated_at','DESC')->paginate($limit_count);
     }
     
-    public function stores()
+    public function store()
     {
-        return $this->hasMany('App\Store');
+        return $this->belongsTo('App\Store');
     }
     
     protected $fillable = [
-           'title',
            'review',
            'chest',
            'arm',
@@ -27,13 +26,11 @@ class Review extends Model
            'leg',
            'comment',          
            'updated_at',
+           'user_id',
+           'store_id',
         ];
         
-        protected $attributes = [
-           'title' => 'あああ',
-           'body' => 'ああああ',
-           'review' => 5,
-        ];
+       
         
         
 

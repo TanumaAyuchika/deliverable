@@ -14,7 +14,6 @@
     </head>
     <body>
         <div class='stores'>
-            
         </div>
         <div class='back'>[<a href='/'>戻る</a>]</div>
         </body>

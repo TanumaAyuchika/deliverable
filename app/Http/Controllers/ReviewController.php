@@ -25,6 +25,6 @@ class ReviewController extends Controller
          $input['user_id'] = Auth::id();
          $input['store_id'] = $store->id;
          $review->fill($input)->save();
-         return redirect('/reviews/' . $review->id);
-}
+         return redirect('/stores/' . $store->id . '/reviews');
+    }
 }

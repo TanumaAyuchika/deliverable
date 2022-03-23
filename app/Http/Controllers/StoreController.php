@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Review;
 use App\Store;
 use Illuminate\Http\Request;
@@ -13,9 +14,10 @@ class StoreController extends Controller
         return view('stores/index')->with(['stores' => $store->getPaginateByLimit()]);
     }
     
-    public function show(Store $store)
+    public function show(Store $store, Review $review)
     {
-        return view('stores/show')->with(['store' => $store]);
+         $reviews =  $store->reviews;
+        return view('stores/show')->with(['store' => $store, 'reviews' => $reviews]);
     }
     
     public function create()//店舗登録ボタン

@@ -14,7 +14,20 @@
     </head>
     <body>
         <div class='stores'>
+             <h2 class='name'>{{ $store->name }}</h2>
+             <p class='address'>{{ $store->address }}</p>
         </div>
+        @foreach ($reviews as $review)   
+            <p class='reviews'>{{ $review->review }}</p>
+            <p class='chest'>胸：{{ $review->chest }}</p>
+            <p class='arm'>腕：{{ $review->arm }}</p>
+            <p class='shoulder'>肩：{{ $review->shoulder }}</p>
+            <p class='belly'>腹：{{ $review->belly }}</p>
+            <p class='back'>背中：{{ $review->back }}</p>
+            <p class='leg'>脚：{{ $review->leg }}</p>
+            <p class='comment'>コメント：{{ $review->comment }}</p>
+            <p class='updated_at'>{{ $review->updated_at }}</p>
+       @endforeach
         <div class='back'>[<a href='/'>戻る</a>]</div>
         </body>
     </html>

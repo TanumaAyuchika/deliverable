@@ -1,4 +1,4 @@
-<h1>エニタイム各店舗詳細</h1>
+<h1>店舗詳細</h1>
 @extends('layouts.app')　　　　　　　　　　　　　　　　　
 
 @section('content')
@@ -29,6 +29,7 @@
             <p class='updated_at'>{{ $review->updated_at }}</p>
        @endforeach
         <div class='back'>[<a href='/'>戻る</a>]</div>
+        <p class='create'>[<a href='/stores/{{ $store->id }}/reviews/create'>作成</a>]</p>
         </body>
     </html>
 @endsection

@@ -17,5 +17,6 @@ Route::get('/stores/{store}/reviews','StoreController@show');
 Route::get('/stores/{store}/reviews/create','ReviewController@create');
 Route::post('/stores','StoreController@store');
 Route::post('/stores/{store}/reviews', 'ReviewController@store');
+Route::delete('/reviews/{review}', 'ReviewController@delete');
 
 Auth::routes();

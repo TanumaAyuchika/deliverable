@@ -28,4 +28,10 @@ class ReviewController extends Controller
          $review->fill($input)->save();
          return redirect('/stores/' . $store->id . '/reviews');
     }
+    
+    public function delete(Review $review)
+    {
+        $review->delete();
+        return redirect('/');
+    }
 }

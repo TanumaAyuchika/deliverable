@@ -20,3 +20,7 @@ Route::post('/stores/{store}/reviews', 'ReviewController@store');
 Route::delete('/reviews/{review}', 'ReviewController@delete');
 
 Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

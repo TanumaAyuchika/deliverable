@@ -27,7 +27,7 @@ class StoreController extends Controller
     
     public function store(Store $store, Request $request)
     {
-        $input = $request['review'];
+        $input = $request['store'];
         $store->fill($input)->save();
         return redirect('/stores/' . $store->id . '/reviews/create');
     }

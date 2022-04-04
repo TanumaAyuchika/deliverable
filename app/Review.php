@@ -19,6 +19,11 @@ class Review extends Model
         return $this->belongsTo('App\Store');
     }
     
+    public function likes()
+    {
+        return $this->hasMany('App\Likes','review_id');
+    }
+    
     protected $fillable = [
            'review',
            'chest',
@@ -32,11 +37,25 @@ class Review extends Model
            'user_id',
            'store_id',
         ];
+    
+    public function is_liked_by_auth_user()
+    {
+     $id = Auth::id();
+
+     $likers = array();
+     foreach($this->likes as $like) {
+       array_push($likers, $like->user_id);
+      }
+
+    if (in_array($id, $likers)) {
+      return true;
+     } else {
+      return false;
+     }
+    
+    }
+
         
        
         
-        
-
-
-
 }

@@ -7,6 +7,7 @@ use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Store;
+use App\Likes;
 
 class ReviewController extends Controller
 {
@@ -33,5 +34,32 @@ class ReviewController extends Controller
     {
         $review->delete();
         return redirect('/');
+    }
+    
+    public function __construct()
+    {
+        $this->middleware(['auth','verified'])->only(['like','unlike']);
+    }
+    
+    public function like($id)
+    {
+        Like::create([
+            'review_id' => $id,
+            'user_id' => Auth::id(),
+        ]);
+        
+        session()->flash('success', 'You Liked the Reply.');
+        
+        return redirect()->back();
+    }
+    
+    public function unlike($id)
+    {
+         $like = Like::where('review_id', $id)->where('user_id', Auth::id())->first();
+         $like->delete();
+
+         session()->flash('success', 'You Unliked the Reply.');
+
+        return redirect()->back();
     }
 }

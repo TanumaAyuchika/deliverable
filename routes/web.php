@@ -15,9 +15,12 @@ Route::group(['middleware' => ['auth']], function(){
    Route::get('/stores/create','StoreController@create');
    Route::get('/stores/{store}/reviews','StoreController@show');
    Route::get('/stores/{store}/reviews/create','ReviewController@create');
+   Route::get('/reviews/like/{id}','ReviewController@like')->name('review.like');
+   Route::get('/reviews/unlike/{id}','ReviewController@unlike')->name('review.unlike');
    Route::post('/stores','StoreController@store');
    Route::post('/stores/{store}/reviews', 'ReviewController@store');
    Route::delete('/reviews/{review}', 'ReviewController@delete');
+   
 });
 
 Auth::routes();

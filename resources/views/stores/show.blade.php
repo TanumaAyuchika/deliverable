@@ -35,6 +35,14 @@
             <p class='leg'>脚：{{ $review->leg }}</p>
             <p class='comment'>コメント：{{ $review->comment }}</p>
             <p class='updated_at'>{{ $review->updated_at }}</p>
+        <div>
+             @if($review->is_liked_by_auth_user())
+               <a href="{{ route('review.unlike', ['id' => $review->id]) }}" class="btn btn-success btn-sm">いいね<span class="badge">{{ $review->likes->count() }}</span></a>
+             @else
+               <a href="{{ route('review.like', ['id' => $review->id]) }}" class="btn btn-secondary btn-sm">いいね<span class="badge">{{ $review->likes->count() }}</span></a>
+             @endif
+        </div>
+        {{ $review->likes->count() }}
        @endforeach
         <div class='back'>[<a href='/'>戻る</a>]</div>
         <p class='create'>[<a href='/stores/{{ $store->id }}/reviews/create'>作成</a>]</p>
